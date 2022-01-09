@@ -340,7 +340,7 @@ void loop() {
 ```
 
 If you only want to print to the console that an error occurred, you can
-use the `ManagedSerialDevice::printFailure` helper:
+use the `ManagedSerialDevice handler.printFailure` helper:
 
 ```c++
 #include <ManagedSerialDevice.h>
@@ -356,7 +356,7 @@ void setup() {
         [](MatchState ms) -> void {
             Serial.println("Connected");
         },
-        ManagedSerialDevice::printFailure(&Serial1), // Will print "Command 'AT+CIPSTART...' failed."
+        handler.printFailure(&Serial1), // Will print "Command 'AT+CIPSTART...' failed."
     );
 }
 
